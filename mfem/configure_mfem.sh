@@ -1,14 +1,14 @@
 #!/bin/bash
 
 MPI_DIR="/usr"
-MFEM_PDIR="${HOME}/software/mfem"
+MFEM_PDIR="${SOFTWARE}/mfem"
 
 rm -rf CMakeCache.txt CMakeFiles 
 \
 cmake \
       -D MFEM_USE_MPI=YES \
       -D MPI_CXX=/usr/bin/mpic++ \
-      -D CMAKE_INSTALL_PREFIX="${HOME}/software/mfem" \
+      -D CMAKE_INSTALL_PREFIX="${SOFTWARE}/mfem" \
       -D CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/mpicxx \
       -D CMAKE_C_COMPILER:FILEPATH=/usr/bin/mpicc \
       -D HYPRE_DIR="${MFEM_PDIR}" \
